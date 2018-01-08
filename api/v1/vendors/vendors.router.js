@@ -11,7 +11,7 @@ router.post('/', function (req, res) {
         let newVendor = req.body;
         vendorCtrl.addNewVendor(newVendor, function (err, result) {
             if (err) {
-                console.error('Error in adding new vendro, ERROR::', err);
+                console.error('Error in adding new vendor, ERROR::', err);
 
                 res.status(400).send({error: 'Something went wrong, please check and tray again..!'});
                 return;

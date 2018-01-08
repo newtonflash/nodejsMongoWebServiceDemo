@@ -20,7 +20,6 @@ const addNewProduct = function (newProduct, done) {
             done(err);
         } else {
             done(null, savedDoc);
-            return;
         }
     });
 }
@@ -71,16 +70,16 @@ const submitNewReview = function (productCode, reviewObj, done) {
         function (err, updatedDoc) {
             if (err) {
                 console.error("Error in submitting review, ERROR::", err);
-                done(err)
+                done(err);
                 return;
             }
             return done(null, updatedDoc);
         });
-}
+};
 
 module.exports = {
     addNewProduct,
     getProducts,
     submitNewReview,
     findProductByCode
-}
+};
